@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.happy.hibernate11lazyLoad">
+    <class name="Student" table="StudentNew" schema="sll"  lazy="true">
+        <id name="stuno" column="stuno">
+           <generator class="native"></generator>
+        </id>
+        <property name="stuname" />
+       <property name="stuage"/>
+        <property name="studate"/>
+    </class>
+</hibernate-mapping>

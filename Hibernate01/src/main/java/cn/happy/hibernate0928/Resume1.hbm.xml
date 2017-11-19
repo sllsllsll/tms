@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.happy.hibernate0928">
+    <class name="Resume1" table="RESUME2">
+        <id name="resid" column="RESID" >
+            <generator class="native"></generator>
+        </id>
+        <property name="resname" column="RESNAME" type="string"></property>
+        <property name="rescardno" column="RESCARDNO" type="string"></property>
+        <one-to-one name="users1" class="Users1" cascade="all"></one-to-one>
+    </class>
+</hibernate-mapping>

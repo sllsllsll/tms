@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+     http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context.xsd
+     http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+     http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+">
+    <!--包扫描器-->
+    <context:component-scan base-package="cn.happy"></context:component-scan>
+    <!--mvc注解驱动   作用：创建7个HttpMessaeingConvert-->
+    <mvc:annotation-driven/>
+    <!--视图解析器-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/jsp/"></property>
+        <property name="suffix" value=".jsp"></property>
+    </bean>
+    <!--1.Datasource-->
+    <!--1.配置数据源c3p0-->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="${jdbc.driverClassName}"/>
+        <property name="user" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <property name="jdbcUrl" value="${jdbc.url}"/>
+    </bean>
+
+    <!--jdbc.properties-->
+    <context:property-placeholder location="classpath:jdbc.properties"></context:property-placeholder>
+
+    <!--2.SessionFactory         类：Local-->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"></property>
+        <property name="hibernateProperties">
+            <props>
+                <!--hibernate.xxxxxx必须以hibernate-->
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.format_sql">true</prop>
+                <prop key="hibernate.dialect">	org.hibernate.dialect.Oracle10gDialect</prop>
+                <!--with current thread bind session-->
+                <prop key="hibernate.current_session_context_class">org.springframework.orm.hibernate5.SpringSessionContext</prop>
+            </props>
+        </property>
+        <!--扫描小配置文件 所有的hbm文件-->
+        <!--     <property name="mappingDirectoryLocations" value="classpath:cn/happy/bean"></property>-->
+        <!--去扫描指定包下带有注解的类-->
+        <property name="packagesToScan">
+            <list>
+                <value>cn.happy.beans</value>
+            </list>
+        </property>
+    </bean>
+
+    <!--3.dao-->
+    <!--    <bean id="deptDAO" class="cn.happy.dao.DeptDAOImpl">
+        </bean>-->
+
+    <!--4.service-->
+    <!--
+        <bean id="deptService" class="cn.happy.service.DeptServiceImpl">
+            <property name="sessionFactory" ref="sessionFactory"></property>
+            <property name="dao" ref="deptDAO"></property>
+        </bean>
+    -->
+
+    <!--5.Controller-->
+
+    <!--  5.事务管理器-->
+    <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+
+    <!--6.事务-->
+    <tx:annotation-driven transaction-manager="transactionManager"></tx:annotation-driven>
+
+</beans>

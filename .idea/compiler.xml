@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <option name="DEFAULT_COMPILER" value="Eclipse" />
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Ajax" />
+        <module name="Commodity" />
+        <module name="DriverCity" />
+        <module name="Hibernate01" />
+        <module name="HibernateBase" />
+        <module name="MyMVC" />
+        <module name="myproject01" />
+        <module name="newsSSM" />
+        <module name="physical" />
+        <module name="School" />
+        <module name="soyea" />
+        <module name="SpringSecurity3" />
+        <module name="SSH_01" />
+        <module name="SSH_02" />
+        <module name="SSH_MVC" />
+        <module name="SSH_MVC01" />
+        <module name="SSHBase_XML" />
+        <module name="SSHBase_ZJ" />
+        <module name="Strtus2" />
+        <module name="Struts2Base" />
+        <module name="tms" />
+        <module name="Word" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Ajax" target="1.5" />
+      <module name="Commodity" target="1.5" />
+      <module name="DriverCity" target="1.5" />
+      <module name="Hibernate01" target="1.5" />
+      <module name="HibernateBase" target="1.5" />
+      <module name="MyMVC" target="1.5" />
+      <module name="myproject01" target="1.5" />
+      <module name="newsSSM" target="1.5" />
+      <module name="physical" target="1.5" />
+      <module name="School" target="1.5" />
+      <module name="soyea" target="1.5" />
+      <module name="SpringSecurity3" target="1.6" />
+      <module name="SSH_01" target="1.5" />
+      <module name="SSH_02" target="1.5" />
+      <module name="SSH_MVC" target="1.5" />
+      <module name="SSH_MVC01" target="1.5" />
+      <module name="SSH_MVC02" target="1.5" />
+      <module name="SSHBase_XML" target="1.5" />
+      <module name="SSHBase_ZJ" target="1.5" />
+      <module name="Strtus2" target="1.5" />
+      <module name="Struts2Base" target="1.5" />
+      <module name="tms" target="1.5" />
+      <module name="tms_SLL" target="1.5" />
+      <module name="Word" target="1.5" />
+      <module name="Y2_SSH" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.happy.hibernate0929left">
+    <class name="Employee" table="Employee">
+        <id name="empno"  column="empno" >
+            <generator class="native" />
+        </id>
+        <property name="enmae" column="enmae"/>
+        <property name="job" column="job"/>
+        <property name="mgr" column="mgr"/>
+        <property name="hiredate" column="hiredate"/>
+        <property name="sal" column="sal"/>
+        <property name="comm" column="comm"/>
+        <property name="deptno" column="deptno"/>
+    </class>
+
+
+        </hibernate-mapping>

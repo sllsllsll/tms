@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="SSHBase_XML:war">
+    <output-path>$PROJECT_DIR$/SSHBase_XML/target</output-path>
+    <root id="archive" name="SSHBase_XML-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="SSHBase_XML:war exploded" />
+    </root>
+  </artifact>
+</component>

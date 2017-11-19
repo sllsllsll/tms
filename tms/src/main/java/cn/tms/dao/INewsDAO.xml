@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.tms.dao.INewsDAO">
+    <resultMap id="newsMapper" type="News">
+        <id column="nid" property="nid"></id>
+        <result column="ntitle" property="ntitle"></result>
+        <result column="updateTime" property="updateTime"></result>
+        <result column="ccode" property="ccode"></result>
+        <result column="djid" property="djid"></result>
+        <result column="start" property="start"></result>
+        <association property="cmColumn" javaType="cm_column">
+            <id column="syscode" property="syscode"></id>
+            <result column="columnname" property="columnname"></result>
+        </association>
+        <association property="user" javaType="UserInfo">
+            <id column="userid" property="userid"></id>
+            <result column="username" property="username"></result>
+        </association>
+    </resultMap>
+
+    <!--1.根据栏目编号查询所有新闻-->
+<!--
+    <select id="ListNews" resultMap="newsMapper">
+        select * from news,tms_user,cm_column
+        WHERE  news.createId=tms_user.userid
+        and news.ccode=cm_column.syscode and ccode=#{ccode}
+    </select>
+-->
+
+
+    <!--分页的 项目-->
+
+    <select id="ListNewsLimit" resultMap="newsMapper">
+        select * from news,tms_user,cm_column
+        WHERE  news.createId=tms_user.userid
+        and news.ccode=cm_column.syscode
+        and ccode=#{ccode}    limit #{pageIndex},#{pageSize}
+    </select>
+
+
+    <!--3.获取总记录数-->
+    <select id="getTotalCount" resultType="int">
+        select count(1) from news
+    </select>
+
+    <!--4.获取带条件的总记录数-->
+    <select id="getTotalCountByRoleName" resultType="int">
+        select count(1) from news WHERE ccode like  '%' #{ccode} '%'
+    </select>
+
+    <insert id="addNews">
+        insert into News(ntitle,djid,start,createId,updateTime,ccode,onePicPath,twoPicPath,Description)
+        values(#{ntitle},#{djid},#{start},#{createId},#{updateTime},#{ccode},#{onePicPath},#{twoPicPath},#{Description})
+    </insert>
+
+
+    <select id="ListNewsLike" resultType="News">
+        select * from News
+        <where>
+            <if test="ntitle!=null and ntitle!=''">
+                and ntitle like '%${ntitle}%'
+            </if>
+            <if test="start!=null and start!=''">
+                and start=#{start}
+            </if>
+        </where>
+    </select>
+
+    <delete id="delNews">
+        delete from News where nid=#{nid}
+    </delete>
+<select id="ByNewsId" resultType="News">
+    select * from News where nid=#{nid}
+</select>
+
+    <update id="updateNews" >
+            update News set
+            ntitle=#{ntitle},djid=#{djid},start=#{start},createId=#{createId},
+            updateTime=#{updateTime},ccode=#{ccode},upload=#{upload} where nid=#{nid}
+    </update>
+
+
+</mapper>

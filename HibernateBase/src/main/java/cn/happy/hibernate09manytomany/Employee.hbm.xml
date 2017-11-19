@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.happy.hibernate09manytomany">
+    <class name="Employee" table="Employee22" schema="sll">
+        <id name="empid" column="empid">
+           <generator class="native"></generator>
+        </id>
+        <property name="empname" />
+        <!--table指的是中间表-->
+        <set name="projects" table="PROEMP22" inverse="true">
+            <key column="REMPID"></key>
+            <many-to-many column="RPROID" class="Project"></many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

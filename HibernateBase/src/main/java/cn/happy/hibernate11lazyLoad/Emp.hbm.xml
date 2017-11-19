@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.happy.hibernate08save">
+    <class name="cn.happy.hibernate11lazyLoad.Emp" table="Emp" schema="sll">
+        <id name="empno" column="empno">
+            <generator class="native"/>
+        </id>
+        <property name="ename" column="enmae"/>
+        <many-to-one name="dept" column="deptno" class="Dept"></many-to-one>
+    </class>
+
+
+</hibernate-mapping>

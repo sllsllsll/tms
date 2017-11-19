@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+
+    <package name="day-11" namespace="" extends="struts-default">
+        <!--文件下载-->
+        <action name="filedownAction" class="cn.happy.struts11down.FileDownAction">
+            <!-- 设置文件路径的参数，传到action类文件中去 -->
+            <param name="inputPath">/upload</param>
+            <!-- 下载文件类型定义，即定义为“stream” -->
+            <result name="success" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <!-- 下载文件输出流定义 -->
+                <!-- 这里的inputName元素所对应的value值downloadFile，在action中一定要有对应的getDownloadFile()方法 -->
+                <param name="inputName">inputStream</param>
+                <!-- 下载文件处理方法 -->
+                <param name="contentDisposition">attachment;filename="${fileName}"</param><!--设置响应的HTTP头信息中的Content-Disposition参数的值-->
+                <!-- 下载缓冲区的大小 -->
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+
+    </package>
+
+</struts>

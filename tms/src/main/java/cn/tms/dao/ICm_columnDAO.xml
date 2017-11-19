@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.tms.dao.ICm_columnDAO">
+
+    <select id="CMListAll1" resultType="cm_column">
+        select *  from cm_column
+        WHERE parentcode=0
+    </select>
+    <select id="CMListAll" resultType="cm_column">
+        select * from cm_column
+    </select>
+
+<select id="SelectPid" resultType="cm_column">
+    select * from cm_column where parentcode=#{parentcode}
+</select>
+
+</mapper>

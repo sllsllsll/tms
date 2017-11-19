@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="connection.url">jdbc:oracle:thin:@localhost:1521:orcl</property>
+        <property name="connection.username">sll</property>
+        <property name="connection.password">sll</property>
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.Oracle10gDialect</property>
+        <property name="show_sql">true</property>
+    <!--    <property name="hbm2ddl.auto">update</property>-->
+       <!-- <property name="hibernate.current_session_context_class">thread</property>-->
+
+<!--<property name="hibernate.cache.use_query_cache">true</property>-->
+<!--   <mapping resource="cn/happy/hibernate01/Dog.xml"/>-->
+        <mapping resource="cn/happy/hql/News.hbm.xml"/>
+        <mapping resource="cn/happy/hqldy/Emp.hbm.xml"/>
+        <mapping resource="cn/happy/hibernate0701duoduiyi/Dept.hbm.xml"/>
+        <mapping resource="cn/happy/hibernate0701duoduiyi/Emp.hbm.xml"/>
+        <mapping resource="cn/happy/hibernate0926yiduiduo/Emp.hbm.xml"/>
+        <mapping resource="cn/happy/hibernate0926yiduiduo/Dept.hbm.xml"/>
+        <mapping resource="cn/happy/hibernate0926yiduiduo/Emp.hbm.xml"/>
+        <mapping resource="cn/happy/hibernate0926to0926/Project.hbm.xml"/>
+        <mapping resource="cn/happy/hibernate0926to0926/Employee.hbm.xml"/>
+        <mapping resource="cn/happy/hibernate0927levelCache/Dept.hbm.xml"/>
+        <mapping resource="cn/happy/hibernate0927levelCache/Emp.hbm.xml"/>
+        <mapping resource="cn/happy/hibernate0928/Users1.hbm.xml"/>
+        <mapping resource="cn/happy/hibernate0928/Resume1.hbm.xml"/>
+        <mapping resource="cn/happy/hibernate0928zujian/EmpInfo.hbm.xml"/>
+        <mapping resource="cn/happy/hibernate0928zujian/Dept.hbm.xml"/>
+        <mapping resource="cn/happy/hibernate0929left/Dept.hbm.xml"/>
+        <mapping resource="cn/happy/hibernate0929left/Emp.hbm.xml"/>
+        <mapping resource="cn/happy/hibernate0929left/Employee.hbm.xml"/>
+        <mapping resource="cn/happy/hibernate0929left/Dept2.hbm.xml"/>
+
+    </session-factory>
+</hibernate-configuration>

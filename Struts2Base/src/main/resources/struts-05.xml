@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <constant name="struts.devMode" value="true"/>
+    <package name="day-05" namespace="/" extends="struts-default">
+        <action name="*_*" class="cn.happy.struts05.{1}" method="{2}">
+            <result name="{2}">/day05/{1}/{2}.jsp</result>
+        </action>
+    </package>
+</struts>

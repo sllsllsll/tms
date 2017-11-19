@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.happy.hibernate07onttomany">
+    <class name="cn.happy.hibernate07onttomany.Emp" table="Emp" schema="sll">
+        <id name="empno"  column="empno" >
+            <generator class="native" />
+        </id>
+        <property name="enmae" column="enmae"/>
+
+        <many-to-one name="dept" column="deptno"
+                     class="cn.happy.hibernate07onttomany.Dept"></many-to-one>
+    </class>
+
+
+        </hibernate-mapping>

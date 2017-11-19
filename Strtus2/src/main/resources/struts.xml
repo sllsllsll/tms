@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <!--支持动态方法调用-->
+    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+    <constant name="struts.devMode" value="true"/>
+    <!--国际化-->
+    <!--指定国际化资源文件的基名为message-->
+    <constant name="struts.custom.i18n.resources" value="message"></constant>
+    
+    <constant name="struts.i18n.encoding" value="utf-8"></constant>
+    
+    <constant name="struts.ui.theme" value="simple"/>
+    
+    
+    
+    <constant name="struts.multipart.maxSize" value="10485760"/>
+    <!--创建一个default包，继承自struts2的struts-default包-->
+    <!--<package name="default" namespace="/" extends="struts-default">
+        <action name="helloWorld" class="cn.happy.a_Struts2HelloWorld.HelloWorldAction">
+            <result name="success">helloWorld.jsp</result>
+        </action>
+    </package>-->
+    <!-- <package name="default" namespace="/" extends="struts-default">
+           <action name="login" class="cn.happy.b_Struts2po.login">
+               <result name="input">/login.jsp</result>
+               <result name="success">sccess.jsp</result>
+               <result name="error">index.jsp</result>
+           </action>
+       </package>
+   -->
+    <!--    <package name="default" namespace="/" extends="struts-default">
+            <action name="iterator" class="cn.happy.c_Strurs2iterator.IteratorAction">
+                <result name="input">/success.jsp</result>
+                <result name="success">/success.jsp</result>
+            </action>
+        </package>-->
+    <!--<package name="default" namespace="/" extends="struts-default">
+        <action name="firstAction" class="cn.happy.d_Struts2Action.FirstAction" method="list">
+            <result name="list">/first.jsp</result>
+            <result name="success">/first.jsp</result>
+        </action>
+    </package>-->
+
+    <package name="default" namespace="/" extends="struts-default">
+        <!--    <action name="firstDel" class="cn.happy.d_Struts2Action.FirstAction" method="del">
+                <result name="del">/first.jsp</result>
+                <result name="success">/first.jsp</result>
+            </action>
+            &lt;!&ndash;通配符&ndash;&gt;
+            <action name="*_*" class="cn.happy.d_Struts2Action.{1}" method="{2}">
+                <result name="{2}">/{1}/{2}.jsp</result>
+                <result name="success">/first.jsp</result>
+            </action>
+
+            &lt;!&ndash;结果类型&ndash;&gt;
+           <action name="UserAction" class="cn.happy.d_Struts2Action.UserAction" method="add">
+                <result name="add" type="chain">
+                    <param name="actionName">list</param>
+                <param name="namespace">/</param>
+                </result>
+                <result name="success">/first.jsp</result>
+            </action>
+            &lt;!&ndash;结果类型&ndash;&gt;
+         <action name="UserActionList" class="cn.happy.d_Struts2Action.UserAction" method="list">
+                <result name="list">
+                /UserAction/list.jsp
+                </result>
+                <result name="success">/first.jsp</result>
+            </action>-->
+
+      <!--  <interceptors>
+            <interceptor name="myTimer" class="cn.happy.g_interceptor.MyTimerInterceptor"></interceptor>
+            <interceptor-stack name="myStack">
+                <interceptor-ref name="defaultStack"></interceptor-ref>
+                <interceptor-ref name="myTimer"></interceptor-ref>
+            </interceptor-stack>
+        </interceptors>
+        <default-interceptor-ref name="myStack"></default-interceptor-ref>
+-->
+    <!--    <default-action-ref name="errorAction"/>
+        <global-results>
+            <result name="login1">/login1.jsp</result>
+        </global-results>
+
+        <action name="errorAction">
+            <result>/error.jsp</result>
+        </action>-->
+<!--
+        <action name="MineAction" class="cn.happy.f_highinterceptor.MineAction">
+            <result>/mine.jsp</result>
+        </action>
+
+        <action name="loginAction" class="cn.happy.f_highinterceptor.MineAction" method="login">
+            <result>/mine.jsp</result>
+            <result name="login">/login1.jsp</result>
+        </action>
+
+
+        <action name="FAction" class="cn.happy.g_interceptor.FirstAction">
+            <result>/login1.jsp</result>
+        </action>
+
+        <action name="ognl" class="cn.happy.h_action.FirstAction">
+            <result>/login1.jsp</result>
+        </action>-->
+<!--文件上传-->
+
+      <!--  <action name="uploadtwo" class="cn.happy.j_servlet.FileUploadActionTwo">
+            <param name="savePath">/upload</param>
+            <result name="success">struts2Upload/strutsupload.jsp</result>
+        </action>
+
+        <action name="moreuploadtwo" class="cn.happy.j_servlet.MoreFileUploadActionTwo">
+            <param name="savePath">/upload</param>
+            <result name="success">moreupload/morestrutsupload.jsp</result>
+        </action>-->
+
+      <!--文件下载-->
+       <!-- <action name="filedowntwo" class="cn.happy.j_servlet.FileDown">
+            <param name="inputPath">/upload</param>
+                <result name="success" type="stream">
+                    <param name="contentType">application/octet-stream</param>
+                    <param name="inputName">inputStream</param>
+                    <param name="contentDisposition">attachment:filename="${fileName}"</param>
+                    <param name="bufferSize">4096</param>
+                </result>
+        </action>-->
+
+
+        <!--数据校验-->
+  <!--      <action name="stuAction" class="cn.happy.k_action.StudentAction">
+            <result name="success">/success2.jsp</result>
+            <result name="input">/success1.jsp</result>
+        </action>-->
+<!--数据校验2-->
+      <!--  <action name="validate" class="cn.happy.m_datevalidation.UserAction">
+            <result name="success">/dateloginsuccess.jsp</result>
+            <result name="input">/datelogin.jsp</result>
+        </action>-->
+        <!--数据校验3xxx-->
+      <!--  <action name="validateXxx" class="cn.happy.m_datevalidation.UserAction" method="regist">
+            <result name="success">/dateloginsuccess.jsp</result>
+            <result name="input">/datelogin.jsp</result>
+        </action>-->
+
+        <!--数据校验4-->
+     <!--   <action name="execute" class="cn.happy.m_datevalidation.ExecunteAction">
+            <result name="success">/dateloginsuccess.jsp</result>
+            <result name="input">/datelogin.jsp</result>
+        </action>-->
+
+        <!--数据校验5-->
+       <!-- <action name="regist" class="cn.happy.n_struts.action.UsersInfoAction">
+            <result name="success">/dateloginsuccess.jsp</result>
+            <result name="input">/datelogin.jsp</result>
+        </action>-->
+
+        <action name="LoginAction" class="cn.happy.o_International.LoginAction">
+            <result>/Internationallogin.jsp</result>
+            <result name="input">/Internationallogin.jsp</result>
+        </action>
+    </package>
+</struts>

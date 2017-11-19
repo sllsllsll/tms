@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.happy.hibernate0928zujian">
+    <class name="EmpInfo" table="EMPINFO">
+        <id name="eid" column="EID">
+            <generator class="native"></generator>
+        </id>
+        <property name="ename" column="ENAME" type="string"></property>
+        <component name="ehome" class="EmpHomeAddress">
+            <parent name="empinfo"/>
+            <property name="ehomestreet" column="EHOMESTREET" type="string"></property>
+            <property name="ehomecity" column="EHOMECITY" type="string"></property>
+            <property name="ehomeprovince" column="EHOMEPROVINCE" type="string"></property>
+            <property name="ehomezipcode" column="EHOMEZIPCODE" type="string"></property>
+        </component>
+    </class>
+</hibernate-mapping>

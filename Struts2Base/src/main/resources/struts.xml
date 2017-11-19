@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+
+
+    <package name="default" namespace="/" extends="struts-default">
+
+
+        <!--配置拦截器  拦截器栈-->
+<interceptors>
+    <interceptor name="myInter" class="cn.happy.struts07.interceptor.MyInterceptor">
+    </interceptor>
+    <interceptor-stack name="myStack">
+        <interceptor-ref name="defaultStack"></interceptor-ref>
+   <interceptor-ref name="myInter"></interceptor-ref>
+    </interceptor-stack>
+</interceptors>
+
+
+<default-interceptor-ref name="myStack"></default-interceptor-ref>
+
+<!--<default-interceptor-ref name="first"></default-interceptor-ref>-->
+<global-results>
+    <result name="login">/WEB-INF/myinter/login.jsp</result>
+</global-results>
+
+<!--<action name="first"></action>-->
+<!--
+        <action name="he" class="cn.happy.struts01.HelloWorld">
+            <result name="helloworld">/helloworld.jsp</result>
+        </action>
+
+        <action name="UserAction" class="cn.happy.struts02.UserAction">
+            <result name="success">/success.jsp</result>
+            <result name="input">/login.jsp</result>
+        </action>
+        <action name="LoginAction" class="cn.happy.struts03.LoginAction">
+            <result name="success">/success2.jsp</result>
+        </action>-->
+
+    </package>
+    <include file="struts-04.xml"></include>
+    <include file="struts-05.xml"></include>
+    <include file="struts-06.xml"></include>
+    <include file="struts-07.xml"></include>
+    <include file="struts-08.xml"></include>
+    <include file="struts-09.xml"></include>
+    <include file="struts-10.xml"></include>
+    <include file="struts-11.xml"></include>
+</struts>

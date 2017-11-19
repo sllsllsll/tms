@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <constant name="struts.devMode" value="true"/>
+    <!--动态方法调用 默认 true-->
+   <!-- <constant name="struts.enable.DynamicMethodInvocation" value="false"/>-->
+    <package name="day-06" namespace="/" extends="struts-default">
+        <action name="userActionResult" class="cn.happy.struts06.FirstAction" method="list">
+            <result name="list" type="chain"><!--/day06/FirstAction/list.jsp-->
+            <param name="actionName">userActionResultAdd</param>
+                <param name="namespace">/</param>
+            </result>
+        </action>
+    <action name="userActionResultAdd" class="cn.happy.struts06.FirstAction" method="add">
+
+            <result name="add">/day06/FirstAction/add.jsp</result>
+        </action>
+
+    </package>
+</struts>

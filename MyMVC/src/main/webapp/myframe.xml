@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE myframe[
+        <!ELEMENT myframe (actions)>
+        <!ELEMENT actions (action*)>
+        <!ELEMENT action (result*)>
+        <!ATTLIST action
+                name CDATA #REQUIRED
+                class CDATA #REQUIRED>
+        <!ELEMENT result (#PCDATA)>
+        <!ATTLIST result
+                name CDATA #IMPLIED
+                redirect (true|false) "false">
+        ]>
+<myframe>
+    <actions>
+        <action name="login" class="action.LoginAction">
+            <result name="success">/success.jsp</result>
+            <result name="login">/login.jsp</result>
+        </action>
+
+    </actions>
+</myframe>

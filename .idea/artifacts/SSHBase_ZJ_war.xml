@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="SSHBase_ZJ:war">
+    <output-path>$PROJECT_DIR$/SSHBase_ZJ/target</output-path>
+    <root id="archive" name="SSHBase_ZJ-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="SSHBase_ZJ:war exploded" />
+    </root>
+  </artifact>
+</component>

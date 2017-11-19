@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Ajax/Ajax.iml" filepath="$PROJECT_DIR$/Ajax/Ajax.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Commodity/Commodity.iml" filepath="$PROJECT_DIR$/Commodity/Commodity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DriverCity/DriverCity.iml" filepath="$PROJECT_DIR$/DriverCity/DriverCity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hibernate01/Hibernate01.iml" filepath="$PROJECT_DIR$/Hibernate01/Hibernate01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HibernateBase/HibernateBase.iml" filepath="$PROJECT_DIR$/HibernateBase/HibernateBase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyMVC/MyMVC.iml" filepath="$PROJECT_DIR$/MyMVC/MyMVC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSHBase_XML/SSHBase_XML.iml" filepath="$PROJECT_DIR$/SSHBase_XML/SSHBase_XML.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSHBase_ZJ/SSHBase_ZJ.iml" filepath="$PROJECT_DIR$/SSHBase_ZJ/SSHBase_ZJ.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSH_01/SSH_01.iml" filepath="$PROJECT_DIR$/SSH_01/SSH_01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSH_02/SSH_02.iml" filepath="$PROJECT_DIR$/SSH_02/SSH_02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSH_MVC/SSH_MVC.iml" filepath="$PROJECT_DIR$/SSH_MVC/SSH_MVC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSH_MVC01/SSH_MVC01.iml" filepath="$PROJECT_DIR$/SSH_MVC01/SSH_MVC01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/School/School.iml" filepath="$PROJECT_DIR$/School/School.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringSecurity3/SpringSecurity3.iml" filepath="$PROJECT_DIR$/SpringSecurity3/SpringSecurity3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Strtus2/Strtus2.iml" filepath="$PROJECT_DIR$/Strtus2/Strtus2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Struts2Base/Struts2Base.iml" filepath="$PROJECT_DIR$/Struts2Base/Struts2Base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Word/Word.iml" filepath="$PROJECT_DIR$/Word/Word.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Y2_SSH.iml" filepath="$PROJECT_DIR$/Y2_SSH.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project/myproject01.iml" filepath="$PROJECT_DIR$/project/myproject01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/physical/physical.iml" filepath="$PROJECT_DIR$/physical/physical.iml" />
+      <module fileurl="file://$PROJECT_DIR$/soyea/soyea.iml" filepath="$PROJECT_DIR$/soyea/soyea.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tms/tms.iml" filepath="$PROJECT_DIR$/tms/tms.iml" />
+    </modules>
+  </component>
+</project>

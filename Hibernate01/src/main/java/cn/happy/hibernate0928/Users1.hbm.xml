@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.happy.hibernate0928">
+    <class name="Users1" table="USERS2">
+        <id name="userid" column="USERID" >
+            <generator class="foreign">
+                <param name="property">resume1</param>
+            </generator>
+        </id>
+        <property name="username" column="USERNAME" type="string"></property>
+        <property name="userpass" column="USERPASS" type="string"></property>
+
+        <!--约束档案表中的列  必须在主表-->
+        <one-to-one name="resume1" class="Resume1" constrained="true"></one-to-one>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+
+    <session-factory>
+        <property name="connection.driver_class">oracle.jdbc.OracleDriver</property>
+        <property name="connection.url">jdbc:oracle:thin:@localhost:1521:orcl</property>
+        <property name="connection.username">sll</property>
+        <property name="connection.password">sll</property>
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.Oracle10gDialect</property>
+
+<property name="current_session_context_class">thread</property>
+        <property name="show_sql">true</property>
+
+<property name="hbm2ddl.auto">update</property>
+        <property name="connection.autocommit">true</property>
+<!--  <mapping resource="cn/happy/hibernate01/Cat.hbm.xml"/>
+        <mapping resource="cn/happy/hibernate02/Dept.hbm.xml"/>
+ <mapping resource="cn/happy/hibernate03hql/Emp.hbm.xml"/>-->
+      <mapping resource="cn/happy/hibernate04pagelist/Emp.hbm.xml"/>
+     <!--   <mapping resource="cn/happy/hibernate06mapping/Emp.hbm.xml"/>
+        <mapping resource="cn/happy/hibernate06mapping/Dept.hbm.xml"/>
+
+        <mapping resource="cn/happy/hibernate07onttomany/Emp.hbm.xml"/>
+        <mapping resource="cn/happy/hibernate07onttomany/Dept.hbm.xml"/>-->
+
+       <!-- <mapping resource="cn/happy/hibernate08save/Emp.hbm.xml"/>
+        <mapping resource="cn/happy/hibernate08save/Dept.hbm.xml"/>
+
+      <mapping resource="cn/happy/hibernate09manytomany/Employee.hbm.xml"/>
+        <mapping resource="cn/happy/hibernate09manytomany/Project.hbm.xml"/>
+        <mapping resource="cn/happy/hibernate11lazyLoad/Student.hbm.xml"/>-->
+   <!--   <mapping resource="cn/happy/hibernate11lazyLoad/Emp.hbm.xml"/>
+        <mapping resource="cn/happy/hibernate11lazyLoad/Dept.hbm.xml"/>-->
+        <!--no-session-->
+      <!--  <mapping resource="cn/happy/hibernate12nosession/Emp.hbm.xml"/>
+        <mapping resource="cn/happy/hibernate12nosession/Dept.hbm.xml"/>
+-->
+     <!--   <mapping class="cn.happy.hibernate13zj.Dept"></mapping>-->
+    <!--    <mapping resource="cn/happy/hibernate10opensessioninview/Student.hbm.xml"/>
+
+
+    -->
+   <!--     <mapping class="cn.happy.hibernate14onetoone.Humen"></mapping>
+        <mapping class="cn.happy.hibernate14onetoone.Card"></mapping>
+      <mapping class="cn.happy.hibernate15onetomany.Dept"></mapping>
+        <mapping class="cn.happy.hibernate15onetomany.Emp"></mapping>-->
+<!--        <mapping class="cn.happy.hibernate16manytomany.Game"></mapping>
+        <mapping class="cn.happy.hibernate16manytomany.Player"></mapping>-->
+  <!--      <mapping class="cn.happy.hibernate17.Dept"></mapping>
+        <mapping class="cn.happy.hibernate17.Emp"></mapping>-->
+   <mapping resource="cn/happy/hibernate17/Emp.hbm.xml"/>
+        <mapping resource="cn/happy/hibernate17/Dept.hbm.xml"/>
+      <mapping resource="cn/happy/hibernate18/Emp.hbm.xml"/>
+        <mapping resource="cn/happy/hibernate18/Dept.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>
